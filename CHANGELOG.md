@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [unreleased]
+
+### ⚙️ Miscellaneous Tasks
+
+- Edit action changelog
+
 ## [0.4.0] - 2024-06-29
 
 ### 🚜 Refactor
