@@ -2,6 +2,8 @@ name: Deploy to Prod use Tag
 
 on:
   push:
+    branches:
+      - main
     tags:
       - "*.*.*" # Срабатывает при пуше тегов с версиями
 
