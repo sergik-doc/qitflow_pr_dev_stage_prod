@@ -1,0 +1,21 @@
+name: Deploy on Tag
+
+on:
+  push:
+    tags:
+      - "*.*.*" # Срабатывает при пуше тегов с версиями
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Get the version
+        id: get_version
+        run: echo "::set-output name=VERSION::${GITHUB_REF#refs/tags/}"
+
+      - name: Production deploy
+        run: echo "Deploy complete: version ${{ steps.get_version.outputs.VERSION }}"
